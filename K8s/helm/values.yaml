@@ -2,7 +2,7 @@
 # Default is docker/robotshop/image:latest
 image:
   repo: robotshop
-  version: secure
+  version: latest
   pullPolicy: IfNotPresent
 
 # EUM configuration
@@ -61,7 +61,10 @@ redis:
   # Storage class to use with redis statefulset.
   storageClassName: standard
 
-shipping: {}
+shipping: 
+    repo: robotshop/rs-shipping
+    version: secure
+    pullPolicy: IfNotPresent
 
 user: {}
 
