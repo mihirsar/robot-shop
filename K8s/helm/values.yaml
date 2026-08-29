@@ -45,7 +45,7 @@ mysql:
   image:
     repo: robotshop
     version: secure
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
 
 payment:
   # Alternative payment gateway URL
@@ -61,7 +61,11 @@ redis:
   # Storage class to use with redis statefulset.
   storageClassName: standard
 
-shipping: {}
+shipping: 
+  image:
+    repo: robotshop
+    version: latest
+    pullPolicy: Always
 
 user: {}
 
