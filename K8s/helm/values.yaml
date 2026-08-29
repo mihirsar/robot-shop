@@ -45,7 +45,7 @@ mysql:
   image:
     repo: robotshop
     version: secure
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
 
 payment:
   # Alternative payment gateway URL
@@ -65,7 +65,7 @@ shipping:
   image:
     repo: robotshop
     version: latest
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
 
 user: {}
 
