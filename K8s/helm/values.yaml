@@ -43,7 +43,7 @@ mongodb: {}
 
 mysql: 
   image:
-    repo: robotshop/rs-mysql-db
+    repo: robotshop
     version: secure
     pullPolicy: IfNotPresent
 
