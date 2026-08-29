@@ -41,7 +41,11 @@ dispatch: {}
 
 mongodb: {}
 
-mysql: {}
+mysql: 
+  image:
+    repo: robotshop
+    version: secure
+    pullPolicy: IfNotPresent
 
 payment:
   # Alternative payment gateway URL

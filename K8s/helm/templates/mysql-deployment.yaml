@@ -19,8 +19,19 @@ spec:
       {{ end }}
       containers:
       - name: mysql
-        image: {{ .Values.image.repo }}/rs-mysql-db:{{ .Values.image.version }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: {{ .Values.mysql.image.repo }}/rs-mysql-db:{{ .Values.mysql.image.version }}
+        imagePullPolicy: {{ .Values.mysql.image.pullPolicy }}
+        env:
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: username
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: password
         # added for Istio
         securityContext:
           capabilities:
