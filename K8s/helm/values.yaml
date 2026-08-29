@@ -62,7 +62,8 @@ redis:
   storageClassName: standard
 
 shipping: 
-    repo: robotshop/rs-shipping
+  image:
+    repo: robotshop
     version: secure
     pullPolicy: IfNotPresent
 

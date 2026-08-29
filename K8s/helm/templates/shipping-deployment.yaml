@@ -19,7 +19,7 @@ spec:
       {{ end }}
       containers:
       - name: shipping
-        image: {{ .Values.image.repo }}/rs-shipping:{{ .Values.image.version }}
+        image: {{ .Values.shipping.image.repo }}/rs-shipping:{{ .Values.shipping.image.version }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
         - name: DB_HOST
