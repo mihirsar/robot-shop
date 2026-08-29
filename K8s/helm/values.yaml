@@ -43,7 +43,7 @@ mongodb: {}
 
 mysql: 
   image:
-    repo: robotshop
+    repo: robotshop/rs-shipping
     version: secure
     pullPolicy: IfNotPresent
 
@@ -63,8 +63,8 @@ redis:
 
 shipping: 
   image:
-    repo: robotshop
-    version: latest
+    repository: robotshop/rs-shipping
+    tag: secure
     pullPolicy: IfNotPresent
 
 user: {}
