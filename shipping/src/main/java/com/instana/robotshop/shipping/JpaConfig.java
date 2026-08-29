@@ -24,6 +24,10 @@ public class JpaConfig {
         String DB_USERNAME = System.getenv("DB_USERNAME");
         String DB_PASSWORD = System.getenv("DB_PASSWORD");
 
+        logger.info("DB_USERNAME = {}", DB_USERNAME);
+        logger.info("DB_PASSWORD set = {}", DB_PASSWORD != null);
+        logger.info("DB_PASSWORD length = {}", DB_PASSWORD == null ? 0 : DB_PASSWORD.length());
+        
         bob.username(DB_USERNAME);
         bob.password(DB_PASSWORD);
         return bob.build();
